@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>New Portfolio</title>
+        <!--Boostrap CSS CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+
+ <div id="mySidenav" class="sidenav">
+   <div class="site-contents">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Millennium Memory Project</a>
+    <a href="#">CIA Data: in Bubbles</a>
+    <a href="#">Best-Selling Writers of All Time</a>
+    <a href="#">U.S. Senate Elections</a>
+    <a href="#">How The Money Moves</a>
+    <a href="#">Fingers: Fact & Fiction</a>
+    <a href="#">What I'm Probably Doing Right Now</a>
+   </div>
+ </div>
+        
+   <audio id="ding">
+    <source src="ding.wav" type="audio/wav">
+   </audio>
+   
+   <audio id="bubble">
+    <source src="bubble.wav" type="audio/wav">
+   </audio>
+    
+   <audio id="typewriter">
+    <source src="typewriter.wav" type="audio/wav">
+   </audio>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12">
+   <div id="content">
+    <div id="left-half">
+     <h3 class="name">scott geier</h3>
+     <h3 class="title">interactive mult</h3>
+    </div>
+    <div id="right-half">
+    <h3 class="title"><span id="i">i</span><span id="apostrophe">'</span><span id="m">m</span>edia</h3>
+        <ul id="menu">
+            <li id="web" onclick="openNav();"></li>
+            <li id="graphics" onclick="openNav();"></li>
+            <li id="audio" onclick="openNav();"></li>
+            <li id="photo" onclick="openNav();"></li>
+            <li id="video" onclick="openNav();"></li>
+            <li id="writing" onclick="openNav();"></li>
+            <li id="blank" onclick="openNav();"></li>
+            <li id="about" onclick="openNav();"></li>
+        </ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"> </script>
+    <!--Bootstrap JS CDN-->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
+    <script>
+           function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("page-content").style.opacity = "0.1";
+    }
+
+   function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+    }
+    </script>
+    </body>
+</html>
