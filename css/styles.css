@@ -20,7 +20,8 @@
     font-size: 1.3em;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .sidenav a:hover, .offcanvas a:focus{
@@ -35,7 +36,7 @@
     margin-left: 50px;
 }
 
-#content{
+#page-content{
     padding-left:40%;
     position:relative;
     margin-top:10%;
@@ -73,6 +74,10 @@
     color:red;
     font-family: Helvetica Neue;
     font-size:1.3em;
+}
+
+.projects-list {
+     list-style: none;
 }
 
 ul, li{

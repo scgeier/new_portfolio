@@ -1,11 +1,3 @@
-$(document).ready(function(){
-//Good habit to include a reminder to get up and move every once in a while//
-function move(){
-   setInterval(function(){ alert("Move"); }, 1800*1000);
-};
-
-move();
-
 
 //Load the sound FX//
 function playDing() {
@@ -80,4 +72,3 @@ makeRed();
 addApostrophe();
 showMenu();
 
-});
