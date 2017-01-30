@@ -4,13 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>New Portfolio</title>
+        <title>Scott Geier: Interactive Multimedia</title>
         <!--Boostrap CSS CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css" />
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/projects.js"></script>
  </head>
  
  <body ng-app="myApp" ng-controller="BaseController as base">
@@ -29,16 +26,23 @@
    
 <div class="container-fluid" ng-controller="ProjectsController as projCtrl">
  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <ul class="projects-list" ng-repeat="project in projCtrl.projects | filter:selectedCategory">
-    <li>{{project.residence}}</li>
-    <!--<a href="#">Best-Selling Writers of All Time</a>
-    <a href="#">U.S. Senate Elections</a>
-    <a href="#">How The Money Moves</a>
-    <a href="#">Fingers: Fact & Fiction</a>
-    <a href="#">What I'm Probably Doing Right Now</a>-->
-   </ul>
- </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
+  <ul class="projects-list">
+   <li class="projects-item" ng-repeat="project in projCtrl.projects | filter:selectedCategory">
+   <div class="row">
+    <div class="col-md-3">
+     <a href="{{project.link}}" target="_blank"><img src="{{project.thumbnail}}"/></a>
+    </div>
+    <div class="col-md-9">
+     <h4><a href="{{project.link}}" target="_blank">{{project.name}}</a></h4>
+     <p>{{project.description}}</p>
+     <p><strong>Skills:</strong> {{project.skills}}</p>
+     <p><strong>File Under:</strong> {{project.fileUnder}}</p>
+    </div>
+   </div>
+   </li>
+  </ul>
+</div>
         
 
  <div class="row">
@@ -51,7 +55,7 @@
     <div id="right-half">
     <h3 class="title"><span id="i">i</span><span id="apostrophe">'</span><span id="m">m</span>edia</h3>
         <ul id="menu">
-            <li id="web" ng-click="selectedCategory = {residence:'Carrboro'}" onclick="openNav();"></li>
+            <li id="web" ng-click="selectedCategory = {category:'web'}" onclick="openNav();"></li>
             <li id="graphics" ng-click="selectedCategory = {interviewLocation:'Bus'}" onclick="openNav();"></li>
             <li id="audio" onclick="openNav();"></li>
             <li id="photo" onclick="openNav();"></li>
@@ -68,6 +72,9 @@
 
  <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"> </script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/projects.js"></script>
   <script src="/js/scripts.js"></script>
   <script>
     function openNav() {
