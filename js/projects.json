@@ -2,47 +2,47 @@
   {
     "name": "The Millennium Memory Project",
     "link": "http://www.millenniummemory.com",
-    "category":"web",
+    "category":"Web Development",
     "id": "A7XmG6",
     "thumbnail":"/img/mmp-tv-with-kiss.svg",
-    "description": "In the summer of 2016, I reached out to more than 200 people in a nationwide online survey that began with the question, 'Do you remember where you were on New Year's Eve, 1999?' I also grabbed a microphone and hit the streets, talking to people from all walks of life about their thoughts and memories from the turn of the millennium. The result was this website, a hybrid work of data visualization, oral history and a longform journalism. It was my master's thesis at the University of North Carolina at Chapel Hill.",
-    "skills": "HTML5, CSS3, JavaScript, jQuery, D3.js, AngularJS, Illustrator, Premier Pro, Audition, Qualtrics (survey software), MTurk",
+    "description": "It began with a simple question: Do you remember where you were and what you were doing on the night of December 31, 1999? It became a hybrid work of data journalism and oral history, and a fascinating look at our memories from the turn of the millennium.",
+    "skills": "HTML5, CSS3, JavaScript, jQuery, D3.js, AngularJS, Illustrator, Premier Pro, Audition, Qualtrics (survey software), Mechanical Turk",
     "fileUnder":"web development, journalism, data visualization, graphic design, audio, video"
   },
-    {
+  {
+    "name": "The Best-Selling Writers of All Time",
+    "link": "http://scottcgeier.com/writers",
+    "category":"Web Development",
+    "id": "H2gq4A8",
+    "thumbnail":"/img/writers.png",
+    "description": "The list of best-selling fiction authors of all time reads like a potboiler in its own right; it's full of surprise and intrigue. Three of the top four in the list are women, and you've probably never heard of one of them. One writer in the chart admitted to plagiarizing another in 1997. Another author was killed in a duel. Dive in with this interactive infographic.",
+    "skills": "HTML5, CSS3, JavaScript, jQuery, D3.js",
+    "fileUnder":"web development, data visualization"
+  },
+      {
     "name": "CIA Data: In Bubbles",
     "link": "http://scottcgeier.com/CIA_Data_Vis/",
-    "category":"web",
+    "category":"Web Development",
     "id": "D6Zr5J5",
     "thumbnail":"/img/CIA.png",
     "description": "The CIA created the World Factbook as a classified document in 1962. They released it to the public in 1971, and it's now one of the leading sources of statistics on each of the world's 195 sovereign nations and 59 dependent territories. This website is a visualization of that data.",
     "skills": "HTML5, CSS3, JavaScript, jQuery, D3.js, AngularJS",
     "fileUnder":"web development, journalism, data visualization"
   },
-  {
-    "name": "The Best-Selling Writers of All Time",
-    "link": "http://scottcgeier.com/writers",
-    "category":"web",
-    "id": "H2gq4A8",
-    "thumbnail":"/img/writers.png",
-    "description": "In the spring of 2016, I came across a list of the best-selling fiction writers of all time. The names were surprising; the sales figures were astounding. I decided to bring the list to life with an interactive infographic.",
-    "skills": "HTML5, CSS3, JavaScript, jQuery, D3.js",
-    "fileUnder":"web development, data visualization"
-  },
     {
     "name": "2016 U.S. Senate Elections",
     "link": "http://scottcgeier.com/senate",
-    "category":"web",
+    "category":"Web Development",
     "id": "E7sk3I2",
     "thumbnail":"/img/senate.png",
-    "description": "With the Senate elections coming up, I wondered: How many of the candidates went to Harvard? How many of them were lawyers? This interactive app provided answers to those questions and more.",
+    "description": "As the U.S. Senate elections approached in 2016, I wondered: How many of the candidates went to Harvard? How many of them were lawyers? This interactive app provided answers to those questions and more.",
     "skills": "HTML5, CSS3, JavaScript, jQuery, AngularJS",
     "fileUnder":"web development, data journalism"
   },
     {
     "name": "How The Money Moves",
     "link": "http://scottcgeier.com/money_moves",
-    "category":"web",
+    "category":"Web Development",
     "id": "W5hj1O9",
     "thumbnail":"/img/money_moves.png",
     "description": "I built this website as a project at UNC. I had two goals: 1) Produce a work of data journalism with at least three visualizations; and 2) emulate the style of a major news publication. To accomplish the first goal, I combed through U.S. census data and found some interesting trends in the migration patterns of Americans at different income levels. For the second objective, I chose to emulate the style of FiveThirtyEight (as it looked in fall 2015). The resemblance is purely for educational purposes.",
@@ -52,20 +52,30 @@
     {
     "name": "Fingers: Fact & Fiction",
     "link": "http://scottcgeier.com/fingers",
-    "category":"web",
+    "category":"Web Development",
     "id": "G4pR3K5",
     "thumbnail":"/img/fingers.png",
     "description": "Ever wonder where the word 'pinky' comes from? Why do most people wear wedding rings on the third finger of their left hand? The answers to these questions and more can be found in this interactive slider.",
     "skills": "HTML5, CSS3, JavaScript, jQuery",
     "fileUnder":"web development, journalism"
   },
-    {
+  {
     "name": "What I'm Probably Doing Right Now",
     "link": "http://scottcgeier.com",
-    "category":"web",
+    "category":"Web Development",
     "id": "B9eL8D3",
     "thumbnail":"/img/clock.png",
     "description": "I'm a private investigator, freelance journalist, and the father of three kids. My schedule varies widely depending on the day and time. So I built working, analog SVG clock that updates my status.",
+    "skills": "HTML5, CSS3, Illustrator, JavaScript",
+    "fileUnder":"web development, sense of humor"
+  },
+    {
+    "name": "A Lesson In Honeysuckle",
+    "link": "http://http://southernthings.web.unc.edu/honeysuckle/",
+    "category":"writing",
+    "id": "A5fJ4K1",
+    "thumbnail":"/img/honeysuckle-bush-cc.jpg",
+    "description": "You can find some interesting things in the woods. Like a memory from your childhood.",
     "skills": "HTML5, CSS3, Illustrator, JavaScript",
     "fileUnder":"web development, sense of humor"
   }

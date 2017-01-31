@@ -43,23 +43,23 @@ function showMenu() {
       playTypewriter();
  }, 2400);
       setTimeout(function(){
-      document.getElementById("graphics").innerHTML = "graphics";
+      document.getElementById("writing").innerHTML = "writing";
       playTypewriter();
  }, 2600);
       setTimeout(function(){
-      document.getElementById("audio").innerHTML = "audio";
+      document.getElementById("graphics").innerHTML = "graphics";
       playTypewriter();
  }, 2800);
       setTimeout(function(){
-      document.getElementById("photo").innerHTML = "photo";
+      document.getElementById("audio").innerHTML = "audio";
       playTypewriter();
  }, 3000);
       setTimeout(function(){
-      document.getElementById("video").innerHTML = "video";
+      document.getElementById("photo").innerHTML = "photo";
       playTypewriter();
  }, 3200);
       setTimeout(function(){
-      document.getElementById("writing").innerHTML = "writing";
+      document.getElementById("video").innerHTML = "video";
       playTypewriter();
  }, 3400);
       setTimeout(function(){

@@ -16,21 +16,26 @@
 
 .sidenav a {
     text-decoration: none;
-    color: black;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.sidenav a:hover, .offcanvas a:focus{
+.offcanvas a:focus{
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.sidenav {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
     margin-left: 50px;
+}
+
+.closebtn {
+    position: absolute;
+    right:50px;
+    font-size:1.2em;
+    color:red;
 }
 
 #page-content{
@@ -79,8 +84,12 @@
     font-size:1.3em;
 }
 
+#projects-category-title{
+    text-align: center;
+}
+
 .projects-list{
-    padding:5%;
+    padding:2% 5% 2% 5%;
 }
 
 .projects-list ul li {
@@ -105,8 +114,13 @@
     }
 }
 
-.projects-item h4{
-    m
+.project-title a{
+    color:black;
+    font-weight:800;
+}
+
+.project-title a:hover{
+    color:red;
 }
 
 #menu {
