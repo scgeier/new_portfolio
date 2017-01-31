@@ -15,7 +15,7 @@
     "category":"Web Development",
     "id": "H2gq4A8",
     "thumbnail":"/img/writers.png",
-    "description": "The list of best-selling fiction authors of all time reads like a potboiler in its own right; it's full of surprise and intrigue. Three of the top four in the list are women, and you've probably never heard of one of them. One writer in the chart admitted to plagiarizing another in 1997. Another author was killed in a duel. Dive in with this interactive infographic.",
+    "description": "The list of best-selling fiction authors of all time reads like a potboiler in its own right; it's full of surprise and intrigue. Three of the top four writers in the list are women, and you've probably never heard of one of them. One writer in the chart admitted to plagiarizing another in 1997. Another author was killed in a duel. Dive in with this interactive infographic.",
     "skills": "HTML5, CSS3, JavaScript, jQuery, D3.js",
     "fileUnder":"web development, data visualization"
   },
@@ -71,12 +71,32 @@
   },
     {
     "name": "A Lesson In Honeysuckle",
-    "link": "http://http://southernthings.web.unc.edu/honeysuckle/",
+    "link": "http://southernthings.web.unc.edu/honeysuckle/",
     "category":"writing",
     "id": "A5fJ4K1",
     "thumbnail":"/img/honeysuckle-bush-cc.jpg",
     "description": "You can find some interesting things in the woods. Like a memory from your childhood.",
-    "skills": "HTML5, CSS3, Illustrator, JavaScript",
+    "skills": "'Southern Things' magazine, Fall 2015",
+    "fileUnder":"web development, sense of humor"
+  },
+  {
+    "name": "Happy Strangers Singing: An Ethnography",
+    "link": "/img/PopUp_intro.pdf",
+    "category":"writing",
+    "id": "H4gA2P4",
+    "thumbnail":"/img/popup.jpeg",
+    "description": "In 2015, I wrote an ethnography of PopUp Chorus, an ad hoc vocal group that invites people to show up on the spot and sing pop and indie rock songs. Exactly who were these people? Why did they do it? Why was it so much damn fun? I spent four months finding out.",
+    "skills": "This was part of a graduate ethnography class at the University of North Carolina. Additional chapters can be provided upon request.",
+    "fileUnder":"web development, sense of humor"
+  },
+    {
+    "name": "Millennium Memory Project: Interactive Cartoons",
+    "link": "http://www.millenniummemory.com",
+    "category":"graphics",
+    "id": "V9jR7l2",
+    "thumbnail":"/img/mmp-cartoon-combo.svg",
+    "description": "For the Millennium Memory Project, I drew cartoons in Illustrator, exported them as SVG code, and dropped the code into my HTML files. This allowed me to create interactive graphics (e.g., a VHS video player with working control buttons).",
+    "skills": "Adobe Illustrator, HTML5, CSS3, JavaScript, jQuery",
     "fileUnder":"web development, sense of humor"
   }
 ]
