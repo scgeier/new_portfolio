@@ -39,7 +39,7 @@ function addApostrophe() {
 //Show the menu//
 function showMenu() {    
      setTimeout(function(){
-      document.getElementById("web").innerHTML = "web dev";
+      document.getElementById("web").innerHTML = "web";
       playTypewriter();
  }, 2400);
       setTimeout(function(){

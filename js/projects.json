@@ -75,8 +75,8 @@
     "category":"writing",
     "id": "A5fJ4K1",
     "thumbnail":"/img/honeysuckle-bush-cc.jpg",
-    "description": "You can find some interesting things in the woods. Like a memory from your childhood.",
-    "skills": "'Southern Things' magazine, Fall 2015",
+    "description": "Honeysuckle is celebrated almost like no other plant, especially in the South. But few people realize that it's actually an invasive weed.",
+    "skills": "Published in 'Southern Things' magazine, Fall 2015",
     "fileUnder":""
   },
   {
@@ -87,6 +87,16 @@
     "thumbnail":"/img/popup.jpeg",
     "description": "In 2015, I wrote an ethnography of PopUp Chorus, an ad hoc vocal group that invites people to show up on the spot and sing pop and indie rock songs. Exactly who were these people? Why did they do it? Why was it so much damn fun? I spent four months finding out.",
     "skills": "This was part of a graduate ethnography class at the University of North Carolina. Additional chapters can be provided upon request.",
+    "fileUnder":""
+  },
+    {
+    "name": "UI/UX Personas",
+    "link": "/img/personas.pdf",
+    "category":"writing",
+    "id": "J3bT0Q5",
+    "thumbnail":"/img/Carla_Munoz_persona.png",
+    "description": "I took a UI/UX class during my graduate studies, and I was required to create personas for the potential visitors of each website I designed during the semester. I quickly discovered two things: 1) Writing personas is fun; and 2) They are an invaluable part of the design process. Today, I still try to create personas before writing a single line of code in a web app.",
+     "skills": "My 12 years of experience as a corporate investigator, writing the biographies of thousands of plaintiffs in product liability lawusits, gives me a unique vantage point on Americans and their online habits.",
     "fileUnder":""
   },
     {
@@ -105,18 +115,38 @@
     "category":"graphics",
     "id": "B7dRX2o5",
     "thumbnail":"/img/Seamus_ethnopoetic3.png",
-    "description": "I made this poster during an ethnography of PopUp Chorus, an ad hoc vocal group in Durham, North Carolina, in 2015. The goal was to capture the style and essence of the choir director's speech -- his pitch, cadence, and inflection -- with just words. The transcription covers a moment from a rehearsal of Roberta Flack's hit song, 'Killing Me Softly With His Song.'",
+    "description": "I made this poster during an ethnography of PopUp Chorus, an ad hoc vocal group in Durham, North Carolina, in 2015. The goal was to capture the style and essence of the choir director's speech -- his pitch, cadence, and inflection -- with just words. The transcription covers a moment from a rehearsal of Roberta Flack's hit, 'Killing Me Softly With His Song.'",
     "skills": "Adobe Illustrator",
     "fileUnder":""
   },
-      {
+    {
     "name": "Fingers: Fact & Fiction",
     "link": "http://scottcgeier.com/fingers",
     "category":"graphics",
     "id": "S1aN4z9",
     "thumbnail":"/img/hand.png",
-    "description": "To create the illustrations for an educational slider about fingers, I took high-contrast pictures of my own hand and used Adobe Shape (now called Adobe Capture CC) to turn them into vector graphics. I then washed over the image with pastel colors and added an art deco font to give the slides a retro look.",
+    "description": "To create the illustrations for an educational slider about fingers, I took high-contrast photos of my own hand and used Adobe Shape (now called Adobe Capture CC) to turn them into vector graphics. I then washed over the images with pastel colors and added an art deco font to give the slides a retro look.",
     "skills": "Adobe Shape, Illustrator",
+    "fileUnder":""
+  },
+    {
+    "name": "Album Cover",
+    "link": "/img/lyrics.pdf",
+    "category":"graphics",
+    "id": "T2vM6h5",
+    "thumbnail":"/img/lyrics.jpg",
+    "description": "Years ago, I wrote and recorded an album's worth of songs in my bedroom in Austin, Texas. I used the lyrics to make a self-portrait for the album cover. Most of the songs were embarassing -- confessional, singer-songwriter crap -- but I still like the artwork.",
+    "skills": "Adobe Illustrator",
+    "fileUnder":""
+  },
+      {
+    "name": "What We Remember: A Slidecast",
+    "link": "http://www.millenniummemory.com/slidecast.html",
+    "category":"audio",
+    "id": "J9kE4l2",
+    "thumbnail":"/img/slidecast.png",
+    "description": "As part of my master's thesis at the University of North Carolina, I conducted an oral history of the turn of the millennium. I interviewed 37 people, from all walks of life, and recorded more than five and a half hours of audio. An unexpected theme emerged from people's memories. This slidecast tells the story.",
+    "skills": "Zoom h4n digital recorder, Adobe Audition, Premiere Pro",
     "fileUnder":""
   }
 ]
