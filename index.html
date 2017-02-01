@@ -31,10 +31,10 @@
   <ul class="projects-list">
    <li class="projects-item" ng-repeat="project in projCtrl.projects | filter:selectedCategory">
    <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
      <a href="{{project.link}}" target="_blank"><img src="{{project.thumbnail}}"/></a>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-8">
      <h4 class="project-title"><a href="{{project.link}}" target="_blank">{{project.name}}</a></h4>
      <p><strong>Story:</strong> {{project.description}}</p>
      <p><strong>Specs:</strong> {{project.skills}}</p>
