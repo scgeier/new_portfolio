@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Scott Geier: Interactive Multimedia</title>
-        <!--Boostrap CSS CDN-->
+ <!--Boostrap CSS CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css" />
  </head>
@@ -58,13 +58,50 @@
             <li class="menu-item" id="web" ng-click="selectedCategory = {category:'web'}" onclick="openNav();"></li>
                <li class="menu-item" id="writing" ng-click="selectedCategory = {category:'writing'}" onclick="openNav();"></li>
             <li class="menu-item" id="graphics" ng-click="selectedCategory = {category:'graphics'}" onclick="openNav();"></li>
-            <li class="menu-item" id="audio" ng-click="selectedCategory = {category:'audio'}"onclick="openNav();"></li>
-            <li class="menu-item" id="photo" onclick="openNav();"></li>
-            <li class="menu-item" id="video" onclick="openNav();"></li>
+            <li class="menu-item" id="audio" ng-click="selectedCategory = {category:'audio'}" onclick="openNav();"></li>
+            <li class="menu-item" id="photo" ng-click="selectedCategory = {category:'photo'}" onclick="openNav();"></li>
+            <li class="menu-item" id="video" ng-click="selectedCategory = {category:'video'}" onclick="openNav();"></li>
             <li class="menu-item" id="blank" onclick="openNav();"></li>
-            <li class="menu-item" id="about"></li>
+            <li class="menu-item" id="about" onclick="horizNav();"></li>
         </ul>
    </div>
+     <div class="row" id="hidden-bio" style="display:none;">
+      <div class="col-md-3" id="bio-pic">
+       <img id="iso-pic" src="/img/iso-pic.png"/>
+      </div>
+      <div class="col-md-5">
+       <div id="bio-text">
+        I'm a reporter for an investigative firm and a freelance storyteller. I specialize in interactive content.</p>
+        <h4 id="look-like">WHAT I LOOK LIKE</h4>
+        <h6>(from the waist up)*</h6>
+        <img id="curvy-arrow" src="/img/curvy-arrow.svg"/>
+       </div>
+      
+       <div id="hidden-edu" style="display:none;">
+        <h4>Davidson College</h4>
+        <h5>B.A. in Philosophy</h5>
+        <h4>University of North Carolina at Chapel Hill</h4>
+        <h5>M.A. in Media and Journalism<br>Specialization: Interactive Multimedia</h5>
+       </div>
+       
+       <div id="hidden-skills" style="display:none;">
+        <h5>Web Development</h5>
+        <h6>HTML5, CSS3, Bootstrap, JavaScript, jQuery, AngularJS, D3.js, Node.js, Express, NPM, MongoDB, social media API's, git, Google Analytics</h6>
+        <h5>Photo/Video/Audio</h5>
+        <h6>Adobe Illustrator, Photoshop, Audition, Premiere Pro, Canon DSLR cameras and lenses, Zoom h4N, wireless lavs</h6>
+        <h5>Research</h5>
+        <h6>Ethnography, Surveys (Qualtrics and Mechanical Turk), UI/UX Testing, Investigative Databases (Accurint, TLO, WestLaw, LexisNexis)</h6>
+        <h5>Reporting</h5>
+        <h6>In 12 years as an investigative reporter, I've interviewed more than 400 witnesses and written over 26,000 pages of reports.</h6>
+       </div>
+       
+      </div>
+      <div class="col-md-4" id="category-icons">
+       <img src="/img/mortarboard.svg" onclick="showEdu();"/>
+       <img src="/img/skills-icon.svg" onclick="showSkills();"/>
+       <img src="/img/mail-icon.svg" onclick="showContactInfo();"/>
+      </div>
+     </div>
   </div>
  </div>
 </div>
@@ -105,6 +142,32 @@
    function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
+    }
+    
+   function horizNav() {
+    console.log("menu moving!");
+    document.getElementById("page-content").style.cssText = "margin-top:0; padding-left:5%; transition:.3s linear;";
+    document.getElementById("menu").style.cssText = "left:60%; top:2%; padding:1%; transition:.3s linear;";
+    document.getElementById("web").style.cssText = "display:inline; padding-left:5px";
+    document.getElementById("writing").style.cssText = "display:inline;padding-left:5px";
+    document.getElementById("graphics").style.cssText = "display:inline;padding-left:5px";
+    document.getElementById("audio").style.cssText = "display:inline;padding-left:5px";
+    document.getElementById("photo").style.cssText = "display:inline;padding-left:7px";
+    document.getElementById("video").style.cssText = "display:inline;";
+    document.getElementById("about").style.cssText ="display:none;"
+    document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
+    }
+    
+    function showEdu() {
+     document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
+      document.getElementById("hidden-skills").style.cssText = "display:none; transition:.5s linear;";
+     document.getElementById("hidden-edu").style.cssText = "display:block; transition:.5s linear;";
+    };
+    function showSkills() {
+     console.log("test");
+     document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
+     document.getElementById("hidden-edu").style.cssText = "display:none; transition:.5s linear;";
+     document.getElementById("hidden-skills").style.cssText = "display:block; transition:.5s linear;";
     }
   </script>
  </body>

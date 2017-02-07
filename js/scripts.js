@@ -1,4 +1,5 @@
-
+$(document).ready(function(){
+      
 //Load the sound FX//
 function playDing() {
       var sound = document.getElementById("ding");
@@ -72,3 +73,15 @@ makeRed();
 addApostrophe();
 showMenu();
 
+console.log("scripts.js is loaded");
+
+$('.bxslider').bxSlider({
+  mode: 'fade',
+  adaptiveHeight: true,
+  nextSelector: '#slider-next',
+  prevSelector: '#slider-prev',
+  nextText: '<i class="fa fa-arrow-circle-o-right fa-2x my-arrow" aria-hidden="true"></i>',
+  prevText: '<i class="fa fa-arrow-circle-o-left fa-2x my-arrow" aria-hidden="true"></i>'
+});
+
+});

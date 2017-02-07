@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154.45 18.76">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>curvy-arrow</title>
+  <g>
+    <path class="a" d="M442.17,273.59l126,1.19c5,0,10.22,0,14.62-2.31s7.54-7.88,5.5-12.43" transform="translate(-435 -259.83)"/>
+    <polygon points="8.59 18.76 0 13.69 8.68 8.79 8.59 18.76"/>
+  </g>
+</svg>

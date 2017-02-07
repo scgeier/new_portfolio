@@ -95,7 +95,7 @@
     "category":"writing",
     "id": "J3bT0Q5",
     "thumbnail":"/img/Carla_Munoz_persona.png",
-    "description": "I took a UI/UX class during my graduate studies, and I was required to create personas for the potential visitors of each website I designed during the semester. I quickly discovered two things: 1) Writing personas is fun; and 2) They are an invaluable part of the design process. Today, I still try to create personas before writing a single line of code in a web app.",
+    "description": "I took a UI/UX class during my graduate studies, and I was required to create personas for the potential visitors of each website I designed during the semester. I quickly discovered two things: 1) writing personas is fun; and 2) they are an invaluable part of the design process. Today, I still try to create personas before writing a single line of code in a web app.",
      "skills": "My 12 years of experience as a corporate investigator, writing the biographies of thousands of plaintiffs in product liability lawusits, gives me a unique vantage point on Americans and their online habits.",
     "fileUnder":""
   },
@@ -147,6 +147,46 @@
     "thumbnail":"/img/slidecast.png",
     "description": "As part of my master's thesis at the University of North Carolina, I conducted an oral history of the turn of the millennium. I interviewed 37 people, from all walks of life, and recorded more than five and a half hours of audio. An unexpected theme emerged from people's memories. This slidecast tells the story.",
     "skills": "Zoom h4n digital recorder, Adobe Audition, Premiere Pro",
+    "fileUnder":""
+  },
+    {
+    "name": "Songs About Sex, Murder and Celebrity",
+    "link": "https://soundcloud.com/scgeier",
+    "category":"audio",
+    "id": "B8dW5m0",
+    "thumbnail":"/img/fiddler.jpg",
+    "description": "I was on a big songwriting kick a few years ago and wrote about 50 tunes (see the album cover in the Graphics section). I put some of my favorites up on SoundCloud. Music is still my mistress, but these days I don't have much time to sneak off and fool around. That's not me in the photo. In a weird way, though, I wish it was.",
+    "skills": "Cubase, Audition, piano, guitar, harmonica",
+    "fileUnder":""
+  },
+       {
+    "name": "Triangle Tango Regatta",
+    "link": "/sailing_photos.html",
+    "category":"photo",
+    "id": "H3sB9m4",
+    "thumbnail":"/img/Geier_SPORTS-814.jpg",
+    "description": "What you get when you put a photographer in a jon boat on choppy waters with a 70-200 lens and a plastic bag? This.",
+    "skills": "Canon EOS 70D DSLR camera, lenses (18-55mm, 50mm prime and 70-200mm), Adobe Lightroom and Photoshop",
+    "fileUnder":""
+  },
+       {
+    "name": "Famille Verite",
+    "link": "/verite_photos.html",
+    "category":"photo",
+    "id": "G7kV4x1",
+    "thumbnail":"/img/Geier_FINALPROJECT-12.jpg",
+    "description": "I think that photojournalism -- and photography in general -- are at their best when they show something you wouldn't have seen otherwise. The familiar becomes strange, and you get that odd feeling that your spying. I tried to create that experience in this photostory assigment at UNC in 2015.",
+    "skills": "Canon EOS 70D DSLR camera, 18-55mm lens, Speedlite external flash, Adobe Lightroom and Photoshop",
+    "fileUnder":""
+  },
+         {
+    "name": "A Picture of Dignity",
+    "link": "http://carolinaphotojournalism.org/cpjw/2015/pictureofdignity-2/",
+    "category":"video",
+    "id": "K6cE3h2",
+    "thumbnail":"/img/Geier_poster.jpg",
+    "description": "Paul Lee can't go into a gas station in Roanoke Rapids, North Carolina, without turning heads. The reason why is both simple and sublime.",
+    "skills": "I made this short documentary for the 2015 Carolina Photojournalism Workshop.",
     "fileUnder":""
   }
 ]

@@ -84,6 +84,7 @@
     font-size:1.3em;
 }
 
+
 #projects-category-title{
     text-align: center;
 }
@@ -132,4 +133,118 @@
 
 #about{
     padding-top:50%;
+}
+
+
+.brand{
+    font-size: 1.5em;
+}
+
+.brand a{
+    color:#ccc;
+}
+
+.brand a:hover{
+    color:red;
+    text-decoration: none;
+}
+
+#pipe{
+    font-size: 0.5em;
+    vertical-align: middle;
+    padding:5px;
+}
+
+#left-half-brand, #right-half-brand{
+    display:inline-block;
+}
+
+#left-half-brand{
+   vertical-align: top;
+}
+
+#right-half-brand{
+    text-align: left;
+    margin-left:1px;
+    line-height: 95%;
+    padding-top:6px;
+}
+
+#red-letters, #photo-word{
+    color:red;
+}
+
+#photostory-title{
+    border-bottom: .5px solid;
+    padding-bottom: 2px;
+}
+
+
+.brand, #photostory-title, #story-description{
+    color:black;
+}
+
+.bx-viewport img{
+    margin-left:-45px;
+}
+
+
+/*.bx-wrapper, .bx-viewport {
+    border:5px solid black!important;
+    box-shadow: none;
+    -webkit-box-shadow:none!important;
+}
+
+
+
+.bx-viewport li{
+    background:black;
+    
+}*/
+
+#arrow-section{
+    text-align: center;
+}
+
+#slider-prev{
+    margin-right:5%;
+}
+
+/*Hidden bio section that appears when user clicks About*/
+#hidden-bio{
+    margin-top:5%;
+}
+
+#iso-pic{
+    width:100%;
+}
+
+#look-like{
+    margin-top:20%;
+}
+
+#bio-text{
+    font-size:1.1em;
+    font-family: Helvetica Neue;
+    font-weight: 200;
+    padding-top:2%;
+}
+
+#curvy-arrow{
+    max-width:20%;
+}
+
+#category-icons img {
+    max-width:100px;
+    display:block;
+    padding:5%;
+}
+
+#hidden-skills h5{
+    font-weight:bold;
+}
+
+#hidden-edu h5, #hidden-skills h6{
+    font-family: Helvetica Neue;
+    font-weight: 200;
 }
