@@ -75,6 +75,7 @@ showMenu();
 
 console.log("scripts.js is loaded");
 
+
 $('.bxslider').bxSlider({
   mode: 'fade',
   adaptiveHeight: true,

@@ -35,11 +35,14 @@
     position: absolute;
     right:50px;
     font-size:1.2em;
-    color:red;
+}
+
+#hamburger{
+    float:right;
 }
 
 #page-content{
-    padding-left:40%;
+    padding-left:35%;
     position:relative;
     margin-top:10%;
 }
@@ -57,6 +60,7 @@
 #left-half{
     margin-right:0;
 }
+
 #right-half{
     text-align: left;
     margin-left:0;
@@ -75,7 +79,7 @@
     font-size:1.2em;
 }
 
-#menu{
+#menu, #mobile-menu{
     position:absolute;
     list-style: none;
     margin-top:0;
@@ -213,18 +217,23 @@
 /*Hidden bio section that appears when user clicks About*/
 #hidden-bio{
     margin-top:5%;
+    padding:2%;
 }
 
 #iso-pic{
-    width:100%;
+    height:400px;
 }
 
 #look-like{
     margin-top:20%;
 }
 
+#bio-content, #category-icons{
+  padding-top:5%;
+}
+
 #bio-text{
-    font-size:1.1em;
+    font-size:1.2em;
     font-family: Helvetica Neue;
     font-weight: 200;
     padding-top:2%;
@@ -234,17 +243,77 @@
     max-width:20%;
 }
 
-#category-icons img {
-    max-width:100px;
-    display:block;
-    padding:5%;
+#mortarboard{
+    padding:1% 1% 3% 1%;
 }
 
-#hidden-skills h5{
+#wrench-pencil, #mail{
+    padding:3%;
+}
+
+#category-icons, #category-icons-mobile{
+    text-align: center;
+}
+
+#category-icons row{
+    float:left;
+}
+    
+#category-icons i:hover, #wrench-pencil:hover {
+    cursor:pointer;
+}
+
+#wrench-pencil{
+    width:80px;
+}
+
+#hidden-skills h4{
     font-weight:bold;
 }
 
-#hidden-edu h5, #hidden-skills h6{
+#hidden-edu h5, #hidden-skills h5{
     font-family: Helvetica Neue;
     font-weight: 200;
 }
+
+#contact-links i{
+    color:black;
+}
+
+#contact-links a{
+    color:red;
+}
+
+#category-icons-mobile{
+    display:none;
+}
+
+@media screen and (max-width:767px){
+    #hidden-bio{
+        padding:1%;
+    }
+    
+    #iso-pic{
+        height:auto;
+        width:80%;
+        margin-left:10%;
+    }
+    
+    #look-like{
+        display:none;
+    }
+    
+    #category-icons{
+        display:none;
+    }
+    
+    #category-icons-mobile{
+        display:inline;
+    }
+    
+    #wrench-pencil-mobile{
+        padding-top:5%;
+        width:40px;
+    }
+}
+

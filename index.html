@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Scott Geier: Interactive Multimedia</title>
+     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
  <!--Boostrap CSS CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css" />
@@ -25,7 +26,7 @@
    </audio>
    
 <div class="container-fluid" ng-controller="ProjectsController as projCtrl">
- <div id="mySidenav" class="sidenav">
+ <div id="projectsSidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">back ></a>
   <h3 id="projects-category-title"></h3>
   <ul class="projects-list">
@@ -43,11 +44,26 @@
    </li>
   </ul>
 </div>
+
+<!--Mobile hamburger side drawer-->
+ <div id="mobileSidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+   <ul id="mobile-menu">
+    <li class="menu-item" id="mobile-web" ng-click="selectedCategory = {category:'web'}" onclick="openNav(); closeMobileNav();">Web</li>
+    <li class="menu-item" id="mobile-writing" ng-click="selectedCategory = {category:'writing'}" onclick="openNav(); closeMobileNav();">Writing</li>
+    <li class="menu-item" id="mobile-graphics" ng-click="selectedCategory = {category:'graphics'}" onclick="openNav();closeMobileNav();">Graphics</li>
+    <li class="menu-item" id="mobile-audio" ng-click="selectedCategory = {category:'audio'}" onclick="openNav();closeMobileNav();">Audio</li>
+    <li class="menu-item" id="mobile-photo" ng-click="selectedCategory = {category:'photo'}" onclick="openNav(); closeMobileNav();">Photo</li>
+    <li class="menu-item" id="mobile-video" ng-click="selectedCategory = {category:'video'}" onclick="openNav(); closeMobileNav();">Video</li>
+   </ul>
+ </div>
+ 
         
 
  <div class="row">
   <div class="col-xs-12">
    <div id="page-content">
+    <span id="hamburger" style="display:none;font-size:50px;cursor:pointer" onclick="openMobileNav();">&#9776</span>
     <div id="left-half">
      <h3 class="name">scott geier</h3>
      <h3 class="title">interactive mult</h3>
@@ -56,7 +72,7 @@
     <h3 class="title"><span id="i">i</span><span id="apostrophe">'</span><span id="m">m</span>edia</h3>
         <ul id="menu">
             <li class="menu-item" id="web" ng-click="selectedCategory = {category:'web'}" onclick="openNav();"></li>
-               <li class="menu-item" id="writing" ng-click="selectedCategory = {category:'writing'}" onclick="openNav();"></li>
+            <li class="menu-item" id="writing" ng-click="selectedCategory = {category:'writing'}" onclick="openNav();"></li>
             <li class="menu-item" id="graphics" ng-click="selectedCategory = {category:'graphics'}" onclick="openNav();"></li>
             <li class="menu-item" id="audio" ng-click="selectedCategory = {category:'audio'}" onclick="openNav();"></li>
             <li class="menu-item" id="photo" ng-click="selectedCategory = {category:'photo'}" onclick="openNav();"></li>
@@ -65,16 +81,19 @@
             <li class="menu-item" id="about" onclick="horizNav();"></li>
         </ul>
    </div>
+    
      <div class="row" id="hidden-bio" style="display:none;">
-      <div class="col-md-3" id="bio-pic">
+      <div class="col-md-4" id="bio-pic">
        <img id="iso-pic" src="/img/iso-pic.png"/>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" id="bio-content">
        <div id="bio-text">
-        I'm a reporter for an investigative firm and a freelance storyteller. I specialize in interactive content.</p>
-        <h4 id="look-like">WHAT I LOOK LIKE</h4>
+        <p>I'm a reporter for an investigative firm and a freelance storyteller. I specialize in interactive content.</p>
+        <div id="look-like">
+        <h4>WHAT I LOOK LIKE</h4>
         <h6>(from the waist up)*</h6>
         <img id="curvy-arrow" src="/img/curvy-arrow.svg"/>
+        </div>
        </div>
       
        <div id="hidden-edu" style="display:none;">
@@ -84,23 +103,85 @@
         <h5>M.A. in Media and Journalism<br>Specialization: Interactive Multimedia</h5>
        </div>
        
-       <div id="hidden-skills" style="display:none;">
-        <h5>Web Development</h5>
-        <h6>HTML5, CSS3, Bootstrap, JavaScript, jQuery, AngularJS, D3.js, Node.js, Express, NPM, MongoDB, social media API's, git, Google Analytics</h6>
-        <h5>Photo/Video/Audio</h5>
-        <h6>Adobe Illustrator, Photoshop, Audition, Premiere Pro, Canon DSLR cameras and lenses, Zoom h4N, wireless lavs</h6>
-        <h5>Research</h5>
-        <h6>Ethnography, Surveys (Qualtrics and Mechanical Turk), UI/UX Testing, Investigative Databases (Accurint, TLO, WestLaw, LexisNexis)</h6>
-        <h5>Reporting</h5>
-        <h6>In 12 years as an investigative reporter, I've interviewed more than 400 witnesses and written over 26,000 pages of reports.</h6>
+       <div id="hidden-skills" style="display:none; opacity:0;">
+        <h4>Web Development</h4>
+        <h5>HTML5, CSS3, Bootstrap, JavaScript, jQuery, AngularJS, D3.js, Node.js, Express, NPM, MongoDB, social media API's, git, Google Analytics</h5>
+        <h4>Photo/Video/Audio</h4>
+        <h5>Adobe Illustrator, Photoshop, Audition, Premiere Pro, Canon DSLR cameras and lenses, Zoom h4N, wireless lavs</h5>
+        <h4>Research</h4>
+        <h5>Ethnography, surveys (Qualtrics and Mechanical Turk), UI/UX Testing, investigative and academic databases (Accurint, TLO, WestLaw, LexisNexis, EBSCO), federal, state and county court databases</h5>
+        <h4>Reporting</h4>
+        <h5>In 12 years as an investigative reporter, I've interviewed more than 400 witnesses and written over 26,000 pages of reports.</h5>
+       </div>
+       
+       <div id="hidden-contact-info" style="display:none;opacity:0;">
+         <h4 id="contact-links">
+          <a href="mailto:scgeier@gmail.com?Subject=Portfolio" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true" ></i>  scgeier@gmail.com</a><br><br><a href="https://github.com/scgeier" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>   github.com/scgeier</a><br><br><a href="https://twitter.com/sc_geier" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>   @sc_geier</a><br><br><i class="fa fa-map-marker" aria-hidden="true"></i>   Chapel Hill, NC</h4>
        </div>
        
       </div>
-      <div class="col-md-4" id="category-icons">
-       <img src="/img/mortarboard.svg" onclick="showEdu();"/>
-       <img src="/img/skills-icon.svg" onclick="showSkills();"/>
-       <img src="/img/mail-icon.svg" onclick="showContactInfo();"/>
+      <div class="col-md-2 offset-1" id="category-icons">
+       <div class="row">
+        <i class="fa fa-graduation-cap fa-4x" id="mortarboard" aria-hidden="true" onclick="showEdu();"></i>
+        <p class="icon-caption">Education</p>
+       </div>
+       <div class="row">
+        <img id="wrench-pencil" src="/img/skills-icon.svg" onclick="showSkills();"/>
+        <p class="icon-caption">Skills</p>
+       </div>
+       <div class="row">
+        <i class="fa fa-envelope-o fa-4x" id="mail" aria-hidden="true" onclick="showContactInfo();"></i>
+        <p class="icon-caption">Contact</p>
+       </div>
       </div>
+      
+<!--mobile icons-->
+      <div class="col-xs-12" id="category-icons-mobile">
+       <div class="col-xs-4">
+        <i class="fa fa-graduation-cap fa-3x" id="mortarboard-mobile" aria-hidden="true" onclick="showEdu();"></i>
+        <p class="icon-caption">Education</p>
+       </div>
+       
+       <div class="col-xs-4">
+        <img id="wrench-pencil-mobile" src="/img/skills-icon.svg" onclick="showSkills();"/>
+        <p class="icon-caption">Skills</p>
+       </div>
+       
+       <div class="col-xs-4">
+        <i class="fa fa-envelope-o fa-3x" id="mail-mobile" aria-hidden="true" onclick="showContactInfo();"></i>
+        <p class="icon-caption">Contact</p>
+       </div>
+      </div>
+      
+<!--hidden bio: mobile display-->      
+       <div class="row" id="hidden-edu-mobile" style="display:none;">
+        <div class="col-xs-12">
+        <h4>Davidson College</h4>
+        <h5>B.A. in Philosophy</h5>
+        <h4>University of North Carolina at Chapel Hill</h4>
+        <h5>M.A. in Media and Journalism<br>Specialization: Interactive Multimedia</h5>
+       </div>
+      </div>
+       
+       <div class="row" id="hidden-skills-mobile" style="display:none;">
+        <div class="col-xs-12">
+        <h4>Web Development</h4>
+        <h5>HTML5, CSS3, Bootstrap, JavaScript, jQuery, AngularJS, D3.js, Node.js, Express, NPM, MongoDB, social media API's, git, Google Analytics</h5>
+        <h4>Photo/Video/Audio</h4>
+        <h5>Adobe Illustrator, Photoshop, Audition, Premiere Pro, Canon DSLR cameras and lenses, Zoom h4N, wireless lavs</h5>
+        <h4>Research</h4>
+        <h5>Ethnography, Surveys (Qualtrics and Mechanical Turk), UI/UX Testing, Investigative Databases (Accurint, TLO, WestLaw, LexisNexis)</h5>
+        <h4>Reporting</h4>
+        <h5>In 12 years as an investigative reporter, I've interviewed more than 400 witnesses and written over 26,000 pages of reports.</h5>
+       </div>
+       </div>
+       
+       <div class="row" id="hidden-contact-info-mobile" style="display:none;">
+        <div class="col-xs-12">
+         <h4 id="contact-links">
+          <a href="mailto:scgeier@gmail.com?Subject=Portfolio" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true" ></i>  scgeier@gmail.com</a><br><br><a href="https://github.com/scgeier" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>   github.com/scgeier</a><br><br><a href="https://twitter.com/sc_geier" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>   @sc_geier</a><br><br><i class="fa fa-map-marker" aria-hidden="true"></i>   Chapel Hill, NC</h4>
+       </div>
+       </div>
      </div>
   </div>
  </div>
@@ -114,61 +195,109 @@
     <script type="text/javascript" src="js/projects.js"></script>
   <script src="/js/scripts.js"></script>
   <script>
- //Change the Category headline based on the chosen menu item (this is easier than trying to do it with Angular and JSON)//
+ //Change the Projects Category headline based on the chosen menu item (this is easier than trying to do it with Angular and JSON)//
    $('.menu-item').click(function() {
      var target = $(this).attr('id');
      console.log(target);
-     if (target == "web") {
+     if (target == "web" || target == "mobile-web") {
         document.getElementById("projects-category-title").innerHTML = "Web Development";
-     }else if (target == "graphics") {
+     }else if (target == "graphics" || target == "mobile-graphics") {
         document.getElementById("projects-category-title").innerHTML = "Graphic Design";
-     }else if (target == "audio") {
+     }else if (target == "audio" || target == "mobile-audio") {
         document.getElementById("projects-category-title").innerHTML = "Audio Projects";
-     }else if (target == "photo") {
+     }else if (target == "photo"|| target == "mobile-photo") {
         document.getElementById("projects-category-title").innerHTML = "Photojournalism";
-     }else if (target == "video") {
+     }else if (target == "video"|| target == "mobile-video") {
         document.getElementById("projects-category-title").innerHTML = "Videography";
-     }else if (target == "writing") {
+     }else if (target == "writing"|| target == "mobile-writing") {
         document.getElementById("projects-category-title").innerHTML = "Written Work";
      }
    });
-//Open each Projects list on click//
+   
+//Open each list of Projects when user clicks the chosen category//
     function openNav() {
     console.log("menu opened");
-    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("projectsSidenav").style.width = "100%";
     document.getElementById("page-content").style.opacity = "0.1";
     }
 
+//Collapse the list of projects and go back to home page on Back button click//
    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("projectsSidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
     }
-    
+
+//When user clicks About, move the other menu items up to top right horizontal and show hidden bio section//
+//On mobile, collapse the other menu items into a hamburger button//
    function horizNav() {
-    console.log("menu moving!");
-    document.getElementById("page-content").style.cssText = "margin-top:0; padding-left:5%; transition:.3s linear;";
-    document.getElementById("menu").style.cssText = "left:60%; top:2%; padding:1%; transition:.3s linear;";
-    document.getElementById("web").style.cssText = "display:inline; padding-left:5px";
-    document.getElementById("writing").style.cssText = "display:inline;padding-left:5px";
-    document.getElementById("graphics").style.cssText = "display:inline;padding-left:5px";
-    document.getElementById("audio").style.cssText = "display:inline;padding-left:5px";
-    document.getElementById("photo").style.cssText = "display:inline;padding-left:7px";
+     console.log("menu moving!");
+     document.getElementById("page-content").style.cssText = "margin-top:0; padding-left:5%; transition:.3s linear;";
+    if (window.innerWidth < 768) {
+         document.getElementById("menu").style.cssText = "display:none;";
+         document.getElementById("hamburger").style.cssText = "display:block;"
+         document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
+    }else{
+    document.getElementById("menu").style.cssText = "left:65%; top:2%;"
+    document.getElementById("web").style.cssText = "display:inline; padding-right:10px";
+    document.getElementById("writing").style.cssText = "display:inline;padding-right:10px";
+    document.getElementById("graphics").style.cssText = "display:inline;padding-right:10px";
+    document.getElementById("audio").style.cssText = "display:inline;padding-right:10px";
+    document.getElementById("photo").style.cssText = "display:inline;padding-right:10px";
     document.getElementById("video").style.cssText = "display:inline;";
     document.getElementById("about").style.cssText ="display:none;"
     document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
     }
+   };
+   
+   function openMobileNav() {
+    console.log("mobile menu opened");
+    document.getElementById("mobileSidenav").style.width = "50%";
+    document.getElementById("page-content").style.opacity = "0.1";
+    }
+
+   function closeMobileNav() {
+    document.getElementById("mobileSidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+    }
     
     function showEdu() {
-     document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
-      document.getElementById("hidden-skills").style.cssText = "display:none; transition:.5s linear;";
-     document.getElementById("hidden-edu").style.cssText = "display:block; transition:.5s linear;";
+     if (window.innerWidth > 768) {
+        document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-skills").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-contact-info").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-edu").style.cssText = "display:block; transition:.5s linear;";
+     }else{
+        document.getElementById("hidden-skills-mobile").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-contact-info-mobile").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-edu-mobile").style.cssText = "display:block; transition:.5s linear;";
+     }
     };
+    
     function showSkills() {
-     console.log("test");
-     document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
-     document.getElementById("hidden-edu").style.cssText = "display:none; transition:.5s linear;";
-     document.getElementById("hidden-skills").style.cssText = "display:block; transition:.5s linear;";
-    }
+     if (window.innerWidth > 768) {
+        document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-edu").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-contact-info").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-skills").style.cssText = "display:block; transition:.5s linear;";
+     }else{
+        document.getElementById("hidden-edu-mobile").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-contact-info-mobile").style.cssText = "display:none; transition:.5s linear;";
+        document.getElementById("hidden-skills-mobile").style.cssText = "display:block; transition:.5s linear;";
+     }
+    };
+    
+    function showContactInfo(){
+     if (window.innerWidth > 768) {
+         document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
+         document.getElementById("hidden-edu").style.cssText = "display:none; transition:.5s linear;";
+         document.getElementById("hidden-skills").style.cssText = "display:none; transition:.5s linear;";
+         document.getElementById("hidden-contact-info").style.cssText = "display:block; transition:.5s linear;";
+     }else{
+         document.getElementById("hidden-edu-mobile").style.cssText = "display:none; transition:.5s linear;";
+         document.getElementById("hidden-skills-mobile").style.cssText = "display:none; transition:.5s linear;";
+         document.getElementById("hidden-contact-info-mobile").style.cssText = "display:block; transition:.5s linear;";
+     }
+    };
   </script>
  </body>
 </html>
