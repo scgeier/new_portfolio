@@ -27,7 +27,9 @@
    
 <div class="container-fluid" ng-controller="ProjectsController as projCtrl">
  <div id="projectsSidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">back ></a>
+    <div id="closebtn-box" style="display:none;">
+     <a href="javascript:void(0)" id="top-closebtn" onclick="closeNav()">< <span id="desktop-back">back</span></a>
+    </div>
   <h3 id="projects-category-title"></h3>
   <ul class="projects-list">
    <li class="projects-item" ng-repeat="project in projCtrl.projects | filter:selectedCategory">
@@ -219,12 +221,16 @@
     console.log("menu opened");
     document.getElementById("projectsSidenav").style.width = "100%";
     document.getElementById("page-content").style.opacity = "0.1";
+    document.getElementById("closebtn-box").style.display = "block";
+    document.getElementById("top-closebtn").style.display = "block";
     }
 
 //Collapse the list of projects and go back to home page on Back button click//
    function closeNav() {
     document.getElementById("projectsSidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
+    document.getElementById("closebtn-box").style.display = "none";
+    document.getElementById("top-closebtn").style.display = "none";
     }
 
 //When user clicks About, move the other menu items up to top right horizontal and show hidden bio section//
@@ -251,7 +257,7 @@
    
    function openMobileNav() {
     console.log("mobile menu opened");
-    document.getElementById("mobileSidenav").style.width = "50%";
+    document.getElementById("mobileSidenav").style.width = "70%";
     document.getElementById("page-content").style.opacity = "0.1";
     }
 

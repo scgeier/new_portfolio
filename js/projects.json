@@ -11,7 +11,7 @@
   },
   {
     "name": "The Best-Selling Writers of All Time",
-    "link": "http://scottcgeier.com/writers",
+    "link": "/writers",
     "category":"Web Development",
     "id": "H2gq4A8",
     "thumbnail":"/img/writers.png",
@@ -21,7 +21,7 @@
   },
       {
     "name": "CIA Data: In Bubbles",
-    "link": "http://scottcgeier.com/CIA_Data_Vis/",
+    "link": "/CIA_Data_Vis/",
     "category":"Web Development",
     "id": "D6Zr5J5",
     "thumbnail":"/img/CIA.png",
@@ -31,7 +31,7 @@
   },
     {
     "name": "2016 U.S. Senate Elections",
-    "link": "http://scottcgeier.com/senate",
+    "link": "/senate",
     "category":"Web Development",
     "id": "E7sk3I2",
     "thumbnail":"/img/senate.png",
@@ -41,7 +41,7 @@
   },
     {
     "name": "How The Money Moves",
-    "link": "http://scottcgeier.com/money_moves",
+    "link": "/money_moves",
     "category":"Web Development",
     "id": "W5hj1O9",
     "thumbnail":"/img/money_moves.png",
@@ -51,7 +51,7 @@
   },
     {
     "name": "Fingers: Fact & Fiction",
-    "link": "http://scottcgeier.com/fingers",
+    "link": "/fingers",
     "category":"Web Development",
     "id": "G4pR3K5",
     "thumbnail":"/img/fingers.png",
@@ -61,7 +61,7 @@
   },
   {
     "name": "What I'm Probably Doing Right Now",
-    "link": "http://scottcgeier.com",
+    "link": "/clock",
     "category":"Web Development",
     "id": "B9eL8D3",
     "thumbnail":"/img/clock.png",
