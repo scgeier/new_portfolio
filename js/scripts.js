@@ -7,8 +7,8 @@ function playDing() {
           sound.play();
     };
 
-function playBubble() {
-      var sound = document.getElementById("bubble");
+function playRubber() {
+      var sound = document.getElementById("rubber");
           sound.load();
           sound.play();
     };
@@ -23,7 +23,7 @@ function playTypewriter() {
 function makeRed() {
     setTimeout(function(){
       console.log("testing");
-     playBubble();
+     playRubber();
      document.getElementById("i").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
      document.getElementById("m").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
  }, 1000);

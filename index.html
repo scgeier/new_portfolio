@@ -14,15 +14,15 @@
  <body ng-app="myApp" ng-controller="BaseController as base">
 
    <audio id="ding">
-    <source src="ding.wav" type="audio/wav">
+    <source src="/audio/ding.wav" type="audio/wav">
    </audio>
    
-   <audio id="bubble">
-    <source src="bubble.wav" type="audio/wav">
+   <audio id="rubber">
+    <source src="/audio/rubber-sound_mixdown.mp3" type="audio/mp3">
    </audio>
     
    <audio id="typewriter">
-    <source src="typewriter.wav" type="audio/wav">
+    <source src="/audio/typewriter.wav" type="audio/wav">
    </audio>
    
 <div class="container-fluid" ng-controller="ProjectsController as projCtrl">
@@ -91,7 +91,7 @@
         <p>I'm a reporter for an investigative firm and a freelance storyteller. I specialize in interactive content.</p>
         <div id="look-like">
         <h4>WHAT I LOOK LIKE</h4>
-        <h6>(from the waist up)*</h6>
+        <h6>(from the waist up)</h6>
         <img id="curvy-arrow" src="/img/curvy-arrow.svg"/>
         </div>
        </div>
@@ -237,7 +237,7 @@
          document.getElementById("hamburger").style.cssText = "display:block;"
          document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
     }else{
-    document.getElementById("menu").style.cssText = "left:65%; top:2%;"
+    document.getElementById("menu").style.cssText = "left:65%; top:5%;"
     document.getElementById("web").style.cssText = "display:inline; padding-right:10px";
     document.getElementById("writing").style.cssText = "display:inline;padding-right:10px";
     document.getElementById("graphics").style.cssText = "display:inline;padding-right:10px";

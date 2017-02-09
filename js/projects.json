@@ -65,8 +65,18 @@
     "category":"Web Development",
     "id": "B9eL8D3",
     "thumbnail":"/img/clock.png",
-    "description": "I'm a private investigator, freelance journalist, and the father of three kids. My schedule varies widely depending on the day and time. So I built working, analog SVG clock that updates my status.",
+    "description": "I'm a private investigator, freelance journalist, and the father of three kids. My schedule varies widely depending on the day and time. So I built a custom, analog SVG clock that updates my status.",
     "skills": "HTML5, CSS3, Illustrator, JavaScript",
+    "fileUnder":"web development, sense of humor"
+  },
+    {
+    "name": "The Website You're Looking At Right Now",
+    "link": "#",
+    "category":"Web Development",
+    "id": "A6fK0Z2",
+    "thumbnail":"/img/portfolio-grab.png",
+    "description": "In case you're wondering, I built this website, too. Might as well mention it.",
+    "skills": "HTML5, CSS3, JavaScript, jQuery, AngularJS (so that I could display six different menus of projects with just a few lines of code), Illustrator, Audition (for the sound effects)",
     "fileUnder":"web development, sense of humor"
   },
     {
@@ -170,8 +180,8 @@
     "fileUnder":""
   },
        {
-    "name": "Famille Verite",
-    "link": "/verite_photos.html",
+    "name": "Motherhood",
+    "link": "/motherhood_photos.html",
     "category":"photo",
     "id": "G7kV4x1",
     "thumbnail":"/img/Geier_FINALPROJECT-12.jpg",

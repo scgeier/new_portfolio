@@ -11,7 +11,7 @@
     font-weight:100;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 5%;
+    padding-top: 0%;
 }
 
 .sidenav a {
@@ -24,25 +24,23 @@
     color: #f1f1f1;
 }
 
-.sidenav {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    margin-left: 50px;
-}
 
 .closebtn {
     position: absolute;
-    right:50px;
-    font-size:1.2em;
+    right:15px;
+    top:15px;
+    font-size:1.4em;
+    font-weight: 400;
+    color:red;
 }
 
 #hamburger{
     float:right;
+    font-size: 2em;
 }
 
 #page-content{
-    padding-left:35%;
+    padding-left:37%;
     position:relative;
     margin-top:10%;
 }
@@ -75,11 +73,12 @@
     margin-left:0;
 }
 
-.title, .name{
-     font-family:Helvetica;
-     font-weight:700;
+.title, .name, #projects-category-title{
+     font-family: 'Helvetica', san-serif;
+     font-weight: 700;
      line-height: 50%;
 }
+
 
 
 #apostrophe{
@@ -94,9 +93,17 @@
     margin-top:0;
     color:red;
     font-family: Helvetica Neue;
+    font-weight: 200;
     font-size:1.3em;
 }
 
+#mobile-menu{
+    margin-top:10%;
+}
+
+#mobile-menu li{
+    padding-bottom:5%;
+}
 
 #projects-category-title{
     text-align: center;
@@ -225,7 +232,7 @@
 
 /*Hidden bio section that appears when user clicks About*/
 #hidden-bio{
-    margin-top:5%;
+    margin-top:2%;
     padding:2%;
 }
 
@@ -234,7 +241,7 @@
 }
 
 #look-like{
-    margin-top:20%;
+    margin-top:35%;
 }
 
 #bio-content, #category-icons{
@@ -249,7 +256,8 @@
 }
 
 #curvy-arrow{
-    max-width:20%;
+    max-width:25%;
+    margin-top:-5%;
 }
 
 #mortarboard{
@@ -276,13 +284,22 @@
     width:80px;
 }
 
-#hidden-skills h4{
+
+#hidden-skills h4, #hidden-skills-mobile h4{
     font-weight:bold;
 }
 
-#hidden-edu h5, #hidden-skills h5{
+#hidden-edu h5, #hidden-skills h5, #hidden-edu-mobile h5, #hidden-skills-mobile h5{
     font-family: Helvetica Neue;
     font-weight: 200;
+}
+
+#hidden-skills-mobile{
+    padding-right:2%;
+}
+
+#hidden-edu-mobile h5, #hidden-skills-mobile h5{
+    line-height: 150%;
 }
 
 #contact-links i{
@@ -298,6 +315,20 @@
 }
 
 @media screen and (max-width:767px){
+    .closebtn{
+        font-size: 1em;
+        right:15px;
+        top:5px;
+    }
+    
+    #left-half{
+        padding-left:5%;
+    }
+    
+    #menu li{
+        padding-bottom:5%;
+    }
+    
     #hidden-bio{
         padding:1%;
     }
@@ -324,5 +355,24 @@
         padding-top:5%;
         width:40px;
     }
+    
+    #contact-links{
+        line-height: 55%;
+        margin-left:12%;
+    }
 }
 
+/*iPhone 5 brand*/
+@media screen and (max-width:374px){
+    .name, .title{
+        font-size:1.5em;
+    }
+
+}
+
+/*iPad portrait*/
+@media screen and (min-width:768px) and (max-width:1023px){
+    #left-half{
+        padding-left:0;
+    }
+}
