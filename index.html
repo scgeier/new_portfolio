@@ -195,7 +195,7 @@
     <script type="text/javascript" src="js/projects.js"></script>
   <script src="/js/scripts.js"></script>
   <script>
- //Change the Projects Category headline based on the chosen menu item (this is easier than trying to do it with Angular and JSON)//
+ //Change the Projects headline based on the chosen menu item (this is easier than trying to do it with Angular and JSON)//
    $('.menu-item').click(function() {
      var target = $(this).attr('id');
      console.log(target);
@@ -232,7 +232,7 @@
    function horizNav() {
      console.log("menu moving!");
      document.getElementById("page-content").style.cssText = "margin-top:0; padding-left:5%; transition:.3s linear;";
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
          document.getElementById("menu").style.cssText = "display:none;";
          document.getElementById("hamburger").style.cssText = "display:block;"
          document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
@@ -261,7 +261,7 @@
     }
     
     function showEdu() {
-     if (window.innerWidth > 768) {
+     if (window.innerWidth >= 1024) {
         document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
         document.getElementById("hidden-skills").style.cssText = "display:none; transition:.5s linear;";
         document.getElementById("hidden-contact-info").style.cssText = "display:none; transition:.5s linear;";
@@ -274,7 +274,7 @@
     };
     
     function showSkills() {
-     if (window.innerWidth > 768) {
+     if (window.innerWidth >= 1024) {
         document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
         document.getElementById("hidden-edu").style.cssText = "display:none; transition:.5s linear;";
         document.getElementById("hidden-contact-info").style.cssText = "display:none; transition:.5s linear;";
@@ -287,7 +287,7 @@
     };
     
     function showContactInfo(){
-     if (window.innerWidth > 768) {
+     if (window.innerWidth >= 1024) {
          document.getElementById("bio-text").style.cssText = "display:none; transition:.5s linear;";
          document.getElementById("hidden-edu").style.cssText = "display:none; transition:.5s linear;";
          document.getElementById("hidden-skills").style.cssText = "display:none; transition:.5s linear;";

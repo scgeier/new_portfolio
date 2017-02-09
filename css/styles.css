@@ -51,6 +51,12 @@
     }
 }
 
+@media screen and (min-width:768px) and (max-width:1023px){
+    #page-content{
+        padding-left:30%;
+    }
+}
+
 #left-half, #right-half{
     display:inline-block;
 }
@@ -110,7 +116,7 @@
 }
 
 .projects-list{
-    padding:2% 5% 2% 5%;
+    padding:2% 10% 2% 10%;
 }
 
 .projects-list ul li {
@@ -118,7 +124,6 @@
 }
 
 .projects-item{
-    border-bottom:1px dotted;
     list-style-type: none;
     padding:2% 5% 2% 5%;
 }
@@ -314,7 +319,7 @@
     display:none;
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:1023px){
     .closebtn{
         font-size: 1em;
         right:15px;
@@ -327,6 +332,13 @@
     
     #menu li{
         padding-bottom:5%;
+    }
+    
+    .projects-list{
+    padding:2% 5% 2% 5%;
+}
+    .projects-item{
+        border-bottom:1px dotted;
     }
     
     #hidden-bio{
@@ -370,9 +382,18 @@
 
 }
 
-/*iPad portrait*/
-@media screen and (min-width:768px) and (max-width:1023px){
-    #left-half{
-        padding-left:0;
-    }
+/*iPad portait*/
+@media screen and (max-width:1023px){
+  #iso-pic{
+    width:50%;
+    margin-left: 22%;
+  }
+  .closebtn{
+    right:25px;
+    top:15px;
+  }
+  .projects-list{
+    padding:2% 7% 2% 7%;
+  }
 }
+
