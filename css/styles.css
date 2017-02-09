@@ -61,6 +61,15 @@
     margin-right:0;
 }
 
+#left-half a{
+    color:black;
+    text-decoration: none;
+}
+
+#left-half a:hover{
+    color:red;
+}
+
 #right-half{
     text-align: left;
     margin-left:0;
