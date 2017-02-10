@@ -27,11 +27,11 @@
    
 <div class="container-fluid" ng-controller="ProjectsController as projCtrl">
  <div id="projectsSidenav" class="sidenav">
-    <div id="closebtn-box" style="display:none;">
-     <a href="javascript:void(0)" id="top-closebtn" onclick="closeNav()">< <span id="desktop-back">back</span></a>
-    </div>
-  <h3 id="projects-category-title"></h3>
-  <ul class="projects-list">
+  <div id="projects-header">
+     <a href="javascript:void(0)" id="top-closebtn" style="display:none;" onclick="closeNav()"><i class="fa fa-chevron-left" aria-hidden="true"></i><span id="desktop-back">  back</span></a>
+     <h3 id="projects-category-title"></h3>
+   </div>
+  <ul class="projects-list" id="top">
    <li class="projects-item" ng-repeat="project in projCtrl.projects | filter:selectedCategory">
    <div class="row">
     <div class="col-md-4">
@@ -51,12 +51,12 @@
  <div id="mobileSidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
    <ul id="mobile-menu">
-    <li class="menu-item" id="mobile-web" ng-click="selectedCategory = {category:'web'}" onclick="openNav(); closeMobileNav();">Web</li>
-    <li class="menu-item" id="mobile-writing" ng-click="selectedCategory = {category:'writing'}" onclick="openNav(); closeMobileNav();">Writing</li>
-    <li class="menu-item" id="mobile-graphics" ng-click="selectedCategory = {category:'graphics'}" onclick="openNav();closeMobileNav();">Graphics</li>
-    <li class="menu-item" id="mobile-audio" ng-click="selectedCategory = {category:'audio'}" onclick="openNav();closeMobileNav();">Audio</li>
-    <li class="menu-item" id="mobile-photo" ng-click="selectedCategory = {category:'photo'}" onclick="openNav(); closeMobileNav();">Photo</li>
-    <li class="menu-item" id="mobile-video" ng-click="selectedCategory = {category:'video'}" onclick="openNav(); closeMobileNav();">Video</li>
+    <li class="menu-item" id="mobile-web" ng-click="selectedCategory = {category:'web'}" onclick="openNav(); closeMobileNav();"><a href="#top">Web</a></li>
+    <li class="menu-item" id="mobile-writing" ng-click="selectedCategory = {category:'writing'}" onclick="openNav(); closeMobileNav();"><a href="#top">Writing</a></li>
+    <li class="menu-item" id="mobile-graphics" ng-click="selectedCategory = {category:'graphics'}" onclick="openNav();closeMobileNav();"><a href="#top">Graphics</a></li>
+    <li class="menu-item" id="mobile-audio" ng-click="selectedCategory = {category:'audio'}" onclick="openNav();closeMobileNav();"><a href="#top">Audio</a></li>
+    <li class="menu-item" id="mobile-photo" ng-click="selectedCategory = {category:'photo'}" onclick="openNav(); closeMobileNav();"><a href="#top">Photo</a></li>
+    <li class="menu-item" id="mobile-video" ng-click="selectedCategory = {category:'video'}" onclick="openNav(); closeMobileNav();"><a href="#top">Video</a></li>
    </ul>
  </div>
  
@@ -221,7 +221,6 @@
     console.log("menu opened");
     document.getElementById("projectsSidenav").style.width = "100%";
     document.getElementById("page-content").style.opacity = "0.1";
-    document.getElementById("closebtn-box").style.display = "block";
     document.getElementById("top-closebtn").style.display = "block";
     }
 
@@ -229,7 +228,6 @@
    function closeNav() {
     document.getElementById("projectsSidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
-    document.getElementById("closebtn-box").style.display = "none";
     document.getElementById("top-closebtn").style.display = "none";
     }
 
@@ -238,7 +236,7 @@
    function horizNav() {
      console.log("menu moving!");
      document.getElementById("page-content").style.cssText = "margin-top:0; padding-left:5%; transition:.3s linear;";
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1024) {
          document.getElementById("menu").style.cssText = "display:none;";
          document.getElementById("hamburger").style.cssText = "display:block;"
          document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
