@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    $(window).load(function() {
+		// Animate loader off screen
+		$(".loader-wheel").fadeOut();
+        $(".container-fluid").toggle();
       
 //Load the sound FX//
 function playDing() {
@@ -122,6 +127,13 @@ $('.bxslider').bxSlider({
   prevSelector: '#slider-prev',
   nextText: '<i class="fa fa-arrow-circle-o-right fa-2x my-arrow" aria-hidden="true"></i>',
   prevText: '<i class="fa fa-arrow-circle-o-left fa-2x my-arrow" aria-hidden="true"></i>'
-});
+});      
+        
+        
+        
+        
+        
+	});
+
 
 });
