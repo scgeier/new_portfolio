@@ -19,6 +19,18 @@
     100% { transform: rotate(360deg); }
 }
 
+@media screen and (max-width: 1023px){
+    .loader-wheel{
+        display:block;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .loader-wheel{
+        display:none;
+    }
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -103,7 +115,7 @@
 
 #right-half{
     text-align: left;
-    margin-left:0;
+    margin-left:-5px;
 }
 
 .title, .name, #projects-category-title{
@@ -382,6 +394,10 @@
         top:5px;
     }
     
+    #i{
+        letter-spacing: 0px;
+    }
+   
     #menu li{
         padding-bottom:5%;
     }
@@ -391,7 +407,7 @@
     }
     
    .projects-list{
-      margin-top:20%;
+      margin-top:35%;
       padding:2% 5% 2% 5%;
     }
     
