@@ -19,17 +19,17 @@
     100% { transform: rotate(360deg); }
 }
 
-/*@media screen and (max-width: 1023px){
+@media screen and (max-width: 1023px){
     .loader-wheel{
-        display:block;
+        top:25%;
     }
 }
 
 @media screen and (min-width: 1024px){
     .loader-wheel{
-        display:none;
+        left:47%;
     }
-}*/
+}
 
 .sidenav {
     height: 100%;

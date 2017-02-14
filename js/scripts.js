@@ -1,11 +1,12 @@
 $(document).ready(function(){
 	console.log("scripts.js is loaded");
-  $(window).load(function() {
+	 $(window).load(function() {
 		$(".loader-wheel").fadeToggle();
-        //$(".container-fluid").toggle();
-		
+	 });
+	 
+function init() {
 //Build the BufferLoader for the Web Audio API//
-function BufferLoader(context, urlList, callback) {
+ function BufferLoader(context, urlList, callback) {
   this.context = context;
   this.urlList = urlList;
   this.onload = callback;
@@ -112,7 +113,11 @@ function finishedLoading(bufferList) {
 
 
 
-//Change the I and M to red//
+//On desktop, run the animation with sound FX (audio won't auto play on iOS) and don't wait for the other assets to load//
+if (window.innerWidth > 1024) {
+    //code
+
+//Make the I and M red//
 function makeRed() {
     setTimeout(function(){
      document.getElementById("i").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
@@ -129,7 +134,7 @@ function addApostrophe() {
 	}, 1800);
 };
 
-//Show the menu//
+//Show the menu below the site title//
 function showMenu() {
      setTimeout(function(){
       document.getElementById("web").innerHTML = "<a href='#top'>web</a>";
@@ -164,10 +169,58 @@ function showMenu() {
 makeRed();
 addApostrophe();
 showMenu();
+}else{
+//On mobile and tablet, don't run the animation until all of the assets have loaded (otherwise it's glitchy)//
+ $(window).load(function() {
+
+	function makeRed() {
+    setTimeout(function(){
+     document.getElementById("i").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
+     document.getElementById("m").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
+ }, 1000);
+  };
+
+function addApostrophe() {
+    setTimeout(function(){
+     document.getElementById("apostrophe").style.cssText = "display:inline; transition:0.5s linear;";
+	}, 1800);
 };
 
+function showMenu() {
+     setTimeout(function(){
+      document.getElementById("web").innerHTML = "<a href='#top'>web</a>";
+ }, 2400);
+      setTimeout(function(){
+      document.getElementById("writing").innerHTML = "<a href='#top'>writing</a>";
+ }, 2600);
+      setTimeout(function(){
+      document.getElementById("graphics").innerHTML = "<a href='#top'>graphics</a>";
+ }, 2800);
+      setTimeout(function(){
+      document.getElementById("audio").innerHTML = "<a href='#top'>audio</a>";
+ }, 3000);
+      setTimeout(function(){
+      document.getElementById("photo").innerHTML = "<a href='#top'>photo</a>";
+ }, 3200);
+      setTimeout(function(){
+      document.getElementById("video").innerHTML = "<a href='#top'>video</a>";
 
+ }, 3400);
+      setTimeout(function(){
+       document.getElementById("about").innerHTML = "about";
+;
+ }, 4500);
+};//showMenu();
 
+makeRed();
+addApostrophe();
+showMenu();
+  });  
+	};
+   };
+  };//init();
+init(); 
+  
 $('.bxslider').bxSlider({
   mode: 'fade',
   adaptiveHeight: true,
@@ -177,8 +230,6 @@ $('.bxslider').bxSlider({
   prevText: '<i class="fa fa-arrow-circle-o-left fa-2x my-arrow" aria-hidden="true"></i>'
 });      
         
-        
- });//.load();
 	
 
 });//.ready()
