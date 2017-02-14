@@ -1,9 +1,10 @@
 $(document).ready(function(){
+
 	console.log("scripts.js is loaded");
 	 $(window).load(function() {
 		$(".loader-wheel").fadeToggle();
 	 });
-	 
+	
 function init() {
 //Build the BufferLoader for the Web Audio API//
  function BufferLoader(context, urlList, callback) {
@@ -112,13 +113,15 @@ function finishedLoading(bufferList) {
   //source3.start(0);
 
 
-
+  var loadState = document.readyState;
+	console.log(loadState);
 //On desktop, run the animation with sound FX (audio won't auto play on iOS) and don't wait for the other assets to load//
-if (window.innerWidth > 1024) {
-    //code
+//Wait for everything to load the first time on mobile (otherwise it's glitchy) and leave out audio//
+//If user returns to homepage on mobile with everything already loaded (refresh or back button), allow animation to run//
+if (window.innerWidth > 1024 || loadState === "complete") {
 
 //Make the I and M red//
-function makeRed() {
+   function makeRed() {
     setTimeout(function(){
      document.getElementById("i").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
      document.getElementById("m").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
@@ -127,7 +130,7 @@ function makeRed() {
   };
 
 //Add the apostrophe to make 'I'm' //
-function addApostrophe() {
+   function addApostrophe() {
     setTimeout(function(){
      document.getElementById("apostrophe").style.cssText = "display:inline; transition:0.5s linear;";
 	 ding.start(0);
@@ -135,7 +138,7 @@ function addApostrophe() {
 };
 
 //Show the menu below the site title//
-function showMenu() {
+   function showMenu() {
      setTimeout(function(){
       document.getElementById("web").innerHTML = "<a href='#top'>web</a>";
 	  typewriter.start(0);
@@ -170,23 +173,21 @@ makeRed();
 addApostrophe();
 showMenu();
 }else{
-//On mobile and tablet, don't run the animation until all of the assets have loaded (otherwise it's glitchy)//
  $(window).load(function() {
-
-	function makeRed() {
+   function makeRed() {
     setTimeout(function(){
      document.getElementById("i").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
      document.getElementById("m").style.cssText = "color:red; font-size:1.2em; letter-spacing:2px; transition:0.2s linear;";
  }, 1000);
   };
 
-function addApostrophe() {
+   function addApostrophe() {
     setTimeout(function(){
      document.getElementById("apostrophe").style.cssText = "display:inline; transition:0.5s linear;";
 	}, 1800);
 };
 
-function showMenu() {
+    function showMenu() {
      setTimeout(function(){
       document.getElementById("web").innerHTML = "<a href='#top'>web</a>";
  }, 2400);
@@ -215,12 +216,12 @@ function showMenu() {
 makeRed();
 addApostrophe();
 showMenu();
-  });  
-	};
-   };
+  }); };//else function for mobile loading
+   };//finishedLoading function for web audio
   };//init();
 init(); 
-  
+
+//jQuery plugin for the photo sliders//
 $('.bxslider').bxSlider({
   mode: 'fade',
   adaptiveHeight: true,
@@ -229,7 +230,6 @@ $('.bxslider').bxSlider({
   nextText: '<i class="fa fa-arrow-circle-o-right fa-2x my-arrow" aria-hidden="true"></i>',
   prevText: '<i class="fa fa-arrow-circle-o-left fa-2x my-arrow" aria-hidden="true"></i>'
 });      
-        
-	
+    
 
 });//.ready()
