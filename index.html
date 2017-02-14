@@ -235,6 +235,7 @@
 
 //When user clicks About, move the other menu items up to top right horizontal and show hidden bio section//
 //On mobile, collapse the other menu items into a hamburger button//
+//On large desktops, move the menu to the left side of the page instead of top right//
    function horizNav() {
      console.log("menu moving!");
      document.getElementById("page-content").style.cssText = "margin-top:0; padding-left:5%; transition:.3s linear;";
@@ -242,7 +243,7 @@
          document.getElementById("menu").style.cssText = "display:none;";
          document.getElementById("hamburger").style.cssText = "display:block;"
          document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
-    }else{
+    }else if(window.innerWidth > 1024 && window.innerWidth < 1919){
     document.getElementById("menu").style.cssText = "left:65%; top:5%;"
     document.getElementById("web").style.cssText = "display:inline; padding-right:10px";
     document.getElementById("writing").style.cssText = "display:inline;padding-right:10px";
@@ -252,6 +253,10 @@
     document.getElementById("video").style.cssText = "display:inline;";
     document.getElementById("about").style.cssText ="display:none;"
     document.getElementById("hidden-bio").style.cssText = "display:block; transition:.3s linear;";
+    }else{
+     document.getElementById("menu").style.cssText = "left:5%; top:15%;"
+     document.getElementById("about").style.cssText ="display:none;"
+     document.getElementById("hidden-bio").style.cssText = "display:block; margin-left:7%; transition:.3s linear;";
     }
    };
    

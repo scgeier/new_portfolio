@@ -96,6 +96,12 @@
     }
 }
 
+@media screen and (min-width:1920px) {
+    #page-content{
+        padding-left:40%;
+    }
+}
+
 #left-half, #right-half{
     display:inline-block;
 }
@@ -115,7 +121,7 @@
 
 #right-half{
     text-align: left;
-    margin-left:-5px;
+    margin-left:-3px;
 }
 
 .title, .name, #projects-category-title{
@@ -314,6 +320,12 @@
     margin-top:35%;
 }
 
+@media screen and (min-width:1600px){
+    #look-like{
+        margin-top:25%;
+    }
+}
+
 #bio-content, #category-icons{
   padding-top:5%;
 }
@@ -321,7 +333,7 @@
 #bio-text{
     font-size:1.2em;
     font-family: Helvetica Neue;
-    font-weight: 200;
+    font-weight: 300;
     padding-top:2%;
 }
 
